@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h1>JavaScript Array</h1>
+        <p id="array"></p>
+        <p id="join"></p>
+        <p id="pop"></p>
+
+        <script>
+            var cars = ["BMW", "Tesla","Mercedes","Toyota","Volvo","Ford"];
+            document.getElementById("array").innerHTML = cars;
+
+            var join = cars.join("*");
+            document.getElementById("join").innerHTML = join;
+
+            var pop = cars.pop();
+            document.getElementById("pop").innerHTML = cars;
+        </script>
+    </body>
+</html>
