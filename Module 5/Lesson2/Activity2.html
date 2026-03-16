@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+   <head></head>
+   <body>
+    <h1>Class in JS</h1>
+    <p id="result"></p>
+    
+    <script>
+        class Fruit {
+
+            constructor(name, color, taste, season, origin) {
+                this.name = name;
+                this.color = color;
+                this.taste = taste;
+                this.season = season;
+                this.origin = origin;
+            }
+        }
+        var fruit = new Fruit("Mango", "Yellow", "Sweet", "Summer", "South Asia");
+        document.getElementById("result").innerHTML = "My favorite fruit is " + fruit.name + ". It is " + fruit.color + ". It tastes  " + fruit.taste + " and it grows in " + fruit.season + ". It originates from " + fruit.origin + "."
+    </script>
+   </body>
+</html>   
