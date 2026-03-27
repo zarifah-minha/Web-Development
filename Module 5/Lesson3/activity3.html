@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+    <h1>JavaScript Array Sorting and Mapping</h1>
+    <p id="array">Original Array: </p>
+    <button onclick="ascending()">Ascending Order</button>
+    <button onclick="descending()">Descending Order</button>
+    <p id="sorted"></p>
+    <p id="array"></p>
+    <p id="newarray"></p>
+
+    <script>
+        var number = [65, 20, 95, 40, 15, 110, 75];
+        document.getElementById("array").innerHTML += number;
+
+        function ascending() {
+            number.sort(function (a, b) {
+                return a - b;
+            })
+            document.getElementById("sorted").innerHTML = "Sorted in Ascending Order: " + number;
+        }
+        function descending() {
+            number.sort(function (a, b) {
+                return b - a;
+            })
+            document.getElementById("sorted").innerHTML = "Sorted in Descending Order: " + number;
+        }
+        var array =[65, 20, 95, 40, 15, 110, 75];
+            document.getElementById("array").innerHTML = "Original Array: " + array;
+
+            function myFunction(num) {
+                return num / 5;
+            }
+
+            var newarray = array.map(myFunction);
+            document.getElementById("newarray").innerHTML = "New Array: " + newarray
+
+    </script>
+</body>
+
+</html>
