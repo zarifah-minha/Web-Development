@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h1>JavaScript Array Mapping</h1>
+        <p id="array"></p>
+        <p id="newarray"></p>
+
+        <script>
+            var array = [1, 2, 3, 4, 5];
+            document.getElementById("array").innerHTML = "Original Array: " +array;
+
+            function myFunction(num) {
+                return num*10;
+            }
+
+            var newarray = array.map(myFunction);
+            document.getElementById("newarray").innerHTML = "New Array: "+newarray
+        </script>
+    </body>
+</html>
