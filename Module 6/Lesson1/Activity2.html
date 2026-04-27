@@ -3,13 +3,25 @@
     <head></head>
     <body>
         <script>
-            var choice = prompt ("Welcome to perimeter calculator \nPlease enter your choice \n1. Rectangle \n2. Triangle \n3. Circle \n4. Square ") ;
+            var choice = prompt ("Welcome to perimeter calculator \nPlease enter your choice \n1. Rectangle \n2. Triangle \n3. Square ") ;
 
             if (choice == "1") {
-                var length = prompt("Please enter the length of the Rectangle: ");
-                var width = prompt("Please enter the width of the rectangle:");
-                var perimeter = 2*length+width;
-                alert("The perimeter of the rectangle is: ")
+                var length = Number(prompt("Please enter the length of the Rectangle: "));
+                var width = Number(prompt("Please enter the width of the rectangle:"));
+                var perimeter = 2* (length+width);
+                alert("The perimeter of the rectangle is: " + perimeter)
+            }
+             else if (choice == "2") {
+                var side1 = Number(prompt("Please enter the value of one side of the triangle:"));
+                var side2 = Number(prompt("Please enter the enter the value of second side of the triangle:"));
+                var side3 = Number(prompt("Please enter the value of side3"));
+                var perimeter = side1 + side2 + side3
+                alert("The perimeter of thhe triangle is: " + perimeter)
+            }
+             else if (choice == "3") {
+                var length = Number(prompt("Please enter the length of the square:"));
+                var perimeter = 4 * length
+                alert("The perimeter of the circle is: " + perimeter)
             }
         </script>
     </body>
