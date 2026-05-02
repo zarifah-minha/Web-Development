@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <div class="wrapper">
+    <h1>Stopwatch</h1>
+    <p><span id="seconds">00</span>:<span id="milliseconds">00</span></p>
+    <button id="button-start">Start</button>
+    <button id="button-stop">Stop</button>
+    <button id="button-reset">Reset</button>
+        </div>
+
+        <script>
+            var seconds = 0;
+            var milliseconds = 0;
+            var appendSeconds;
+            var appendMilliseconds;
+            var interval;
+
+            window.onload = function() {
+                appendMilliseconds = document.getElementById("milliseconds");
+                appendSeconds = document.getElementById("seconds");
+
+                var buttonStart = document.getElementById("button-start");
+                var buttonStop = document.getElementById("button-stop");
+                var buttonReset = document.getElementById("button-reset");
+
+                buttonStart.onclick = function() {
+                    clearInterval(interval);
+                    interval = setInterval(startTimer, 10);
+
+                }
+                buttonStop.onclick = function() {
+                    clearInterval(interval);
+                }
+                buttonReset.onclick = function() {
+                    clearInterval(interval);
+                    milliseconds = 0;
+                    seconds = 0;
+                    appendMilliseconds.innerHTML = "00";
+                    appendSeconds.innerHTML = "00";
+                }
+                
+            }
+            function startTimer() {
+                milliseconds++;
+                if (milliseconds <=9) {
+                    appendMilliseconds.innerHTML = "0" + milliseconds;
+                }
+                else {
+                    appendMilliseconds.innerhtml = milliseconds;
+                }
+                if (milliseconds > 99){
+                    seconds++;
+                    appendSeconds.innerHTML = seconds < 10 ? "0" + seconds : seconds;
+                    milliseconds = 0;
+                    appendMilliseconds.innerHTML = "00"
+                }
+            }
+        </script>
+    </body>
+</html>
