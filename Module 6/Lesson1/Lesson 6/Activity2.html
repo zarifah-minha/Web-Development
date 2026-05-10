@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        #number {
+            font-size: 320px;
+        }
+
+        #number:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div>Click on the number...</div>
+    <div id="number" onclick="stopstart()"></div>
+    <script>
+        var numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
+        var stopped = true;
+
+        function change() {
+            var random = Math.floor(Math.random() * 10);
+            document.getElementById("number").innerHTML = numbers[random];
+        }
+        function stopstart() {
+            if (stopped) {
+                interval = setInterval(change, 100);
+                stopped = false;
+            } else {
+                clearInterval(interval);
+                stopped = true;
+            }
+        }
+        window.onload = function () {
+            number = document.getElementById("number");
+            stopstart()
+        }
+    </script>
+
+
+</body>
+
+</html>
