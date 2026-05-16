@@ -15,8 +15,8 @@ body {
     float: left;
 }
 .topnav a:hover {
-    background-color: rgb(126, 71, 114);
-    color: rgb(39, 10, 35);
+    background-color: rgb(122, 25, 101);
+    color: rgb(226, 193, 222);
 }
 .topnav a.active {
     background-color: rgb(48, 4, 33);
