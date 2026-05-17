@@ -5,10 +5,10 @@ body {
 
 .topnav {
     overflow: hidden;
-    background-color: rgba(0, 61, 13, 0.966);
+    background-color: rgba(6, 91, 94, 0.966);
 }
 .topnav a {
-    color: rgb(64, 161, 105);
+    color: rgb(26, 143, 127);
     text-align: center;
     text-decoration: none;
     font-size: 20px;
@@ -18,8 +18,8 @@ body {
     
 }
 .topnav a:hover {
-    background-color: rgb(31, 133, 65);
-    color: rgb(0, 0, 0);
+    background-color: rgb(2, 34, 39);
+    color: rgb(255, 255, 255);
 }
 .topnav a.active {
     background-color: rgb(27, 75, 55);
